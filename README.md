@@ -14,3 +14,10 @@ npm start
 // or
 yarn start
 ```
+
+## Test
+```sh
+npm test
+\\ or
+yarn test
+```
