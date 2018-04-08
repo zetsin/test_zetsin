@@ -6,8 +6,7 @@ import { ConnectedRouter, routerReducer, routerMiddleware } from 'react-router-r
 import createHistory from 'history/createBrowserHistory'
 import thunk from 'redux-thunk-it'
 
-import App from 'containers/App'
-import stores from './stores'
+import stores from 'stores'
 
 const history = createHistory()
 
@@ -21,10 +20,11 @@ const store = createStore(
 
 class Comp extends React.Component {
   render () {
+    const { component } = this.props
     return (
       <Provider store={store}>
         <ConnectedRouter history={history}>
-          <Route component={App} />
+          <Route component={component} />
         </ConnectedRouter>
       </Provider>
     )
